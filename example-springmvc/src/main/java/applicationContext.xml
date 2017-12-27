@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/mvc
+       http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+
+    <!-- 静态资源不走controller -->
+    <!--<mvc:resources mapping="/resources/**" location="/resources/" />-->
+    <!-- or  <mvc:default-servlet-handler/> 与上面mvc:resources标签选其一即可,这里如果配置，必须配置<mvc:annotation-driven/>其他controller才可正常工作-->
+    <bean id="user1" class="domain.User">
+        <property name="userName" value="chentao"></property>
+        <property name="password" value="123"></property>
+        <property name="realName" value="chentao"></property>
+    </bean>
+</beans>
